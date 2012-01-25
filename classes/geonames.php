@@ -307,7 +307,7 @@ class GeoNames {
 	 * class constructor
 	 * @param string $username optional
 	 */
-	public function __construct($username='')
+	public function __construct($config)
 	{
 		$this->_url = $config['url'];	
 		$this->_username = $config['username'];	
