@@ -8,7 +8,7 @@
  *
  */
 
-class geoNames {
+class GeoNames {
 
 	protected $_config = array();
 	protected static $_instance;
