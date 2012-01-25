@@ -15,16 +15,16 @@ class GeoNames {
 
 	public static function instance()
 	{
-		if ( ! isset(geoNames::$_instance))
+		if ( ! isset(GeoNames::$_instance))
 		{
 			// Load the configuration for this type
 			$config = Kohana::$config->load('geonames');
 			
 			// Create a new session instance
-			Geoip3::$_instance = new Geoip3($config);
+			GeoNames::$_instance = new GeoNames($config);
 		}
 		
-		return Geoip3::$_instance;
+		return GeoNames::$_instance;
 	}
 	
 	/**
