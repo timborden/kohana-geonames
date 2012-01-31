@@ -405,14 +405,10 @@ class GeoNames {
 	 */
 	private function _checkResponse()
 	{
-		if (isset($this->_results->status->value)
-			&& isset($this->_results->status->message))
+		if (isset($this->_results->status->value) && isset($this->_results->status->message))
 		{
 
-			throw new Kohana_Exception('Geonames error response:  ' .
-				$this->_results->status->message,
-				$this->_results->status->value
-			);
+			throw new Kohana_Exception('Geonames error response:  '.$this->_results->status->message);
 		}
 	}
 
